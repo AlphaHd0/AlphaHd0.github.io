@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        button{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30pt;
+        }
+
+        a{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30pt;
+            text-align: center;
+            display: block;
+        }
+
+        p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20pt;
+        }
+    </style>
+    <script>
+        var randomNum = Math.floor(Math.random() * 11);
+        console.log(randomNum)
+        randomNum = Number(randomNum)
+
+        function clickFunction() {
+        if (randomNum == 0) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 0"
+        } if (randomNum == 1) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 1" 
+        } if (randomNum == 2) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 2"
+        } if (randomNum == 3) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 3"
+        } if (randomNum == 4) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 4"
+        } if (randomNum == 5) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 5"
+        } if (randomNum == 6) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 6"
+        } if (randomNum == 7) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 7"
+        } if (randomNum == 8) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 8"
+        } if (randomNum == 9) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 9"
+        } if (randomNum == 10) {
+            document.getElementById("answer").innerHTML = "Doğru Cevap: 10"
+        }
+        }
+
+        function getClicked0() {
+            document.getElementById("click").innerHTML = "Cevabınız: 0"
+        }
+        function getClicked1() {
+            document.getElementById("click").innerHTML = "Cevabınız: 1"
+        }
+        function getClicked2() {
+            document.getElementById("click").innerHTML = "Cevabınız: 2"
+        }
+        function getClicked3() {
+            document.getElementById("click").innerHTML = "Cevabınız: 3"
+        }
+        function getClicked4() {
+            document.getElementById("click").innerHTML = "Cevabınız: 4"
+        }
+        function getClicked5() {
+            document.getElementById("click").innerHTML = "Cevabınız: 5"
+        }
+        function getClicked6() {
+            document.getElementById("click").innerHTML = "Cevabınız: 6"
+        }
+        function getClicked7() {
+            document.getElementById("click").innerHTML = "Cevabınız: 7"
+        }
+        function getClicked8() {
+            document.getElementById("click").innerHTML = "Cevabınız: 8"
+        }
+        function getClicked9() {
+            document.getElementById("click").innerHTML = "Cevabınız: 9"
+        }
+        function getClicked10() {
+            document.getElementById("click").innerHTML = "Cevabınız: 10"
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <button id="button0" onclick="clickFunction(), getClicked0()">0</button>
+        <button id="button1" onclick="clickFunction(), getClicked1()">1</button>
+        <button id="button2" onclick="clickFunction(), getClicked2()">2</button>
+        <button id="button3" onclick="clickFunction(), getClicked3()">3</button>
+        <button id="button4" onclick="clickFunction(), getClicked4()">4</button>
+        <button id="button5" onclick="clickFunction(), getClicked5()">5</button>
+        <button id="button6" onclick="clickFunction(), getClicked6()">6</button>
+        <button id="button7" onclick="clickFunction(), getClicked7()">7</button>
+        <button id="button8" onclick="clickFunction(), getClicked8()">8</button>
+        <button id="button9" onclick="clickFunction(), getClicked9()">9</button>
+        <button id="button10" onclick="clickFunction(), getClicked10()">10</button>
+        <p id="answer">True Answer:</p>
+        <p id="click">Clicked:</p>
+    </center>
+    <a href="https://alphahd0.github.io/FindTrueNumber.html">Sayfayı Yenile</a>
+</body>
+</html>
