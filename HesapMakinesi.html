@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknobiat - Hesap Makinesi</title>
+    <style>
+        button{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30pt;
+        }
+
+        p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30pt;
+        }
+
+        a{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30pt;
+        }
+    </style>
+</head>
+<body>
+    <p id="text1">1. Sayı:</p>
+    <p id="text2">2. Sayı:</p>
+    <p id="text3">İşlem:</p>
+    <p id="text4">Sonuç:</p>
+    
+    <script>
+        setTimeout(() => {
+            var sayi1 = prompt("Bir sayı giriniz.");
+        document.getElementById("text1").innerHTML = '1. Sayı:' +" "+ sayi1
+        sayi1 = Number(sayi1)
+
+        var sayi2 = prompt("Bir sayı giriniz.");
+        document.getElementById("text2").innerHTML = '2. Sayı:' +" "+ sayi2
+        sayi2 = Number(sayi2)
+        
+        var islem = prompt("Dört işlemden birini seçiniz: Toplama = topla, Çıkarma = çıkar, Çarpma = çarp,  Bölme = böl");
+        var sonuc;
+        if (islem == "topla") {
+            document.getElementById("text3").innerHTML = "İşlem: Toplama"
+            sonuc = sayi1 + sayi2
+        } else if (islem == "çıkar") {
+            document.getElementById("text3").innerHTML = "İşlem: Çıkarma"
+            sonuc = sayi1 - sayi2
+        } else if (islem == "çarp") {
+            document.getElementById("text3").innerHTML = "İşlem: Çarpma"
+            sonuc = sayi1 * sayi2
+        } else if (islem == "böl") {
+            document.getElementById("text3").innerHTML = "İşlem: Bölme"
+            sonuc = sayi1 / sayi2
+        } else {
+            document.getElementById("text3").innerHTML = "İşlem: Bulunamadı"
+        }
+
+            console.log(sonuc)
+            document.getElementById("text4").innerHTML = "Sonuç:" +" "+ sonuc
+        if (document.getElementById("text4").innerHTML == "Sonuç: undefined") {
+            document.getElementById("text4").innerHTML = "Sonuç: Bulunamadı"
+        } else if (document.getElementById("text4").innerHTML == "Sonuç: NaN") {
+            document.getElementById("text4").innerHTML = "Sonuç: Bulunamadı"
+        } if (isNaN(sayi1 / sayi2)) {
+            console.log(sayi1/sayi2)
+            document.getElementById("text1").innerHTML = "1.Sayı: Geçersiz sayı"
+            document.getElementById("text2").innerHTML = "2.Sayı: Geçersiz sayı"
+        }
+        }, 5000);
+
+        </script>
+</body>
+</html>
