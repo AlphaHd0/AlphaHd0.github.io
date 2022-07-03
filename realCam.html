@@ -1,0 +1,45 @@
+<html><head>
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<title>Metasploit screenshare - 192.168.1.33</title>
+<script language="javascript">
+function updateStatus(msg) {
+  var status = document.getElementById("status");
+  status.innerText = msg;
+}
+
+function noImage() {
+  document.getElementById("streamer").style = "display:none";
+  updateStatus("Waiting");
+}
+
+var i = 0;
+function updateFrame() {
+  var img = document.getElementById("streamer");
+  img.src = "gCJMXmPE.jpeg#" + i;
+  img.style = "display:";
+  updateStatus("Playing");
+  i++;
+}
+
+setInterval(function() {
+  updateFrame();
+},25);
+
+</script>
+</head>
+<body>
+<noscript>
+  <h2><font color="red">Error: You need Javascript enabled to watch the stream.</font></h2>
+</noscript>
+<pre>Target IP  : 192.168.1.33
+Start time : 2022-07-03 17:38:35 +0300
+Status     : <span id="status">Playing</span>
+</pre>
+<br>
+<img onerror="noImage()" id="streamer" src="gCJMXmPE.jpeg#2028" style="">
+<br><br>
+<a href="http://www.metasploit.com" target="_blank">www.metasploit.com</a>
+
+
+    </body></html>
