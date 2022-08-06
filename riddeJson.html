@@ -1,0 +1,16 @@
+<script>
+    const URL = 'http://alphahd0.github.io/ride.json'
+    const data = {
+    "userId": 1,
+    "title": "delectus aut autem",
+    "completed": false
+    };
+    // Send a post request
+    fetch(URL, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+    }
+    })
+</script>
