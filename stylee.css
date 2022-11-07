@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(30, 30, 30);
+  }
+
+p {
+  color: #fff;
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 105px;
+  border-radius: 30px;
+  text-align: right;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 100px;
+}
+
+button {
+  margin-bottom: 7px;
+  margin-left: 15px;
+  color: #fff;
+  background-color: rgb(51, 51, 51);
+  font-size: 105px;
+  width: 175px;
+  height: 175px;
+  cursor: pointer;
+  border-radius: 100%;
+}
