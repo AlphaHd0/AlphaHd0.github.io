@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <style>
+        p{
+            font-size: 17pt;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h1{
+            font-size: 25pt;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h2{
+            font-size: 17pt;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a{
+            font-size: 17pt;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Basamaklı Çarpma İşlemi</title>
+    <script>
+        var a = Math.floor(Math.random() * 99);
+        var b = Math.floor(Math.random() * 99);
+        if (a < 11) {
+            a = a + 11
+        } 
+        if (b < 11) {
+            b = b + 11
+        }
+
+        console.log(a)
+        console.log(b)
+        var c = a * b
+        console.log(c)
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Çarpma İşlemi</h1>
+    </center>
+    <p id="first">First Number</p>
+    <p id="second">Second Number</p>
+    <input type="text" id="inp" onkeydown="func(this)">
+    <p id="sum" hidden>SUM</p>
+    <script>
+        document.getElementById("first").innerHTML = String(a)
+        document.getElementById("second").innerHTML = String(b)
+        document.getElementById("sum").innerHTML = String(c)
+
+        function func(x) {
+            if(event.key === 'Enter') {
+                var myInput = document.getElementById("inp").value
+                console.log(myInput)
+                console.log(Number(document.getElementById("sum").innerHTML))
+
+                if (Number(myInput) == Number(document.getElementById("sum").innerHTML)) {
+                    alert("Your answer is CORRECT.")
+                }
+                else {
+                    alert("Your answer is INCORRECT. Answer: " + document.getElementById("sum").innerHTML)
+                }
+        }
+    }
+    </script>
+</body>
+</html>
