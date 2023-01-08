@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <style>
+        p{
+            font-size: 17pt;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h1{
+            font-size: 25pt;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h2{
+            font-size: 17pt;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a{
+            font-size: 17pt;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementler</title>
+    <script>
+        var an = "NIL"
+        var answer = "nil"
+        var a = Math.floor(Math.random() * 19);
+        if (a == 0) {
+            a = 1
+        }
+        if (a == 1) {
+            an = "Hidrojen"
+            answer = "H"
+        } if (a == 2) {
+            an = "Helyum"
+            answer = "He"
+        } if (a == 3) {
+            an = "Lityum"
+            answer = "Li"
+        } if (a == 4) {
+            an = "Berilyum"
+            answer = "Be"
+        } if (a == 5) {
+            an = "Bor"
+            answer = "B"
+        } if (a == 6) {
+            an = "Karbon"
+            answer = "C"
+        } if (a == 7) {
+            an = "Azot"
+            answer = "N"
+        } if (a == 8) {
+            an = "Oksijen"
+            answer = "O"
+        } if (a == 9) {
+            an = "Flor"
+            answer = "F"
+        } if (a == 10) {
+            an = "Neon"
+            answer = "Ne"
+        } if (a == 11) {
+            an = "Sodyum"
+            answer = "Na"
+        } if (a == 12) {
+            an = "Magnezyum"
+            answer = "Mg"
+        } if (a == 13) {
+            an = "Aluminyum"
+            answer = "Al"
+        } if (a == 14) {
+            an = "Silisyum"
+            answer = "Si"
+        } if (a == 15) {
+            an = "Fosfor"
+            answer = "P"
+        } if (a == 16) {
+            an = "Kükürt"
+            answer = "Se"
+        } if (a == 17) {
+            an = "Klor"
+            answer = "Cl"
+        } if (a == 18) {
+            an = "Argon"
+            answer = "Ar"
+        } if (a == 19) {
+            an = "Potasyum"
+            answer = "K"
+        } if (a == 20) {
+            an = "Kalsiyum"
+            answer = "Ca"
+        }
+        console.log(an)
+        console.log(a)
+        console.log(answer)
+    </script>
+</head>
+<body>
+    <center>
+        <h1>İlk 20 Element</h1>
+    </center>
+    <p id="Elementler">Random Element...</p>
+    <input type="text" id="inp" onkeydown="func(this)">
+    <p id="cevap" hidden>SUM</p>
+    <script>
+        document.getElementById("Elementler").innerHTML = an
+
+        function func(x) {
+            if(event.key === 'Enter') {
+                var myInput = document.getElementById("inp").value
+                console.log(myInput)
+
+                if (myInput == answer) {
+                    alert("Your answer is CORRECT: (" + String(a) + ". Element)")
+                }
+                else {
+                    alert("Your answer is INCORRECT. Answer: " + answer + "(" + String(a) + ". Element)")
+                }
+        }
+    }
+    </script>
+</body>
+</html>
